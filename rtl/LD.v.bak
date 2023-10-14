@@ -1,0 +1,11 @@
+module LD(clk_1k,cfm,led);
+	input cfm;
+	input clk_1k;
+	output reg [7:0] led=8'h0;
+	
+	always@(posedge clk_1k) begin
+		if(cfm)
+			led<=8'hF;
+	end
+	
+endmodule

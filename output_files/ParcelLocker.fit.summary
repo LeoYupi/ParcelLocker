@@ -1,0 +1,11 @@
+Fitter Status : Successful - Sun Dec 26 11:56:23 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : ParcelLocker
+Top-level Entity Name : ParcelLocker
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 877 / 1,270 ( 69 % )
+Total pins : 59 / 116 ( 51 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )

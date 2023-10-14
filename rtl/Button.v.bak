@@ -1,0 +1,16 @@
+module Button(btn_p,num_in)
+	input [7:0] btn_p;
+	output [3:0] num_in;
+	
+	always@(btn_p) begin
+		case(btn_p)
+			8'b0000_0001:num_in<=4'h0;
+			8'b0000_0010:num_in<=4'h1;
+			8'b0000_0100:num_in<=4'h2;
+			8'b0000_1000:num_in<=4'h3;
+			8'b0001_0000:num_in<=4'h4;
+			8'b0010_0000:num_in<=4'h5;
+			8'b0100_0000:num_in<=4'h6;
+			8'b1000_0000:num_in<=4'h7;
+	end
+endmodule

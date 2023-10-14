@@ -1,0 +1,142 @@
+# Reading D:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
+# do ParcelLocker_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Memory.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:20 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Memory.v 
+# -- Compiling module Memory
+# 
+# Top level modules:
+# 	Memory
+# End time: 17:43:20 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:20 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v 
+# -- Compiling module ParcelLocker
+# 
+# Top level modules:
+# 	ParcelLocker
+# End time: 17:43:20 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:21 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v 
+# -- Compiling module Screen
+# 
+# Top level modules:
+# 	Screen
+# End time: 17:43:21 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:21 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v 
+# -- Compiling module ClockDivide
+# 
+# Top level modules:
+# 	ClockDivide
+# End time: 17:43:21 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:21 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v 
+# -- Compiling module DISP
+# 
+# Top level modules:
+# 	DISP
+# End time: 17:43:21 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:21 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v 
+# -- Compiling module Keyboard
+# 
+# Top level modules:
+# 	Keyboard
+# End time: 17:43:21 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:21 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v 
+# -- Compiling module debounce
+# 
+# Top level modules:
+# 	debounce
+# End time: 17:43:21 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:22 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v 
+# -- Compiling module LD
+# 
+# Top level modules:
+# 	LD
+# End time: 17:43:22 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl {D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:22 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl" D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v 
+# -- Compiling module BP
+# 
+# Top level modules:
+# 	BP
+# End time: 17:43:22 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/tb {D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:43:22 on Dec 08,2021
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/tb" D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v 
+# -- Compiling module ClockDivide_tb
+# 
+# Top level modules:
+# 	ClockDivide_tb
+# End time: 17:43:22 on Dec 08,2021, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work -voptargs="+acc"  ClockDivide_tb
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L maxii_ver -L rtl_work -L work -voptargs=""+acc"" ClockDivide_tb 
+# Start time: 17:43:22 on Dec 08,2021
+# Loading work.ClockDivide_tb
+# Loading work.ClockDivide
+# Loading work.BP
+# ** Warning: (vsim-3015) D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v(9): [PCDPC] - Port size (26) does not match connection size (32) for port 'frequency'. The port definition is at: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ClockDivide_tb/testbench01 File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v
+# ** Warning: (vsim-3015) D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v(9): [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ClockDivide_tb/testbench01 File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v
+# ** Warning: (vsim-3015) D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v(16): [PCDPC] - Port size (26) does not match connection size (32) for port 'frequency'. The port definition is at: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ClockDivide_tb/testbenc02 File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v
+# ** Warning: (vsim-3015) D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v(16): [PCDPC] - Port size (1) does not match connection size (32) for port 'rst'. The port definition is at: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ClockDivide_tb/testbenc02 File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v
+# ** Warning: (vsim-3015) D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v(23): [PCDPC] - Port size (1) does not match connection size (32) for port 'snd_sel'. The port definition is at: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /ClockDivide_tb/bp File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# Break key hit
+# Break in Module BP at D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v line 28
+# End time: 17:48:55 on Dec 08,2021, Elapsed time: 0:05:33
+# Errors: 0, Warnings: 5

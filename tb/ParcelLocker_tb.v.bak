@@ -1,0 +1,22 @@
+`timescale 10ps/1ns
+
+module ParcelLocker_tb;
+    reg clk_in;
+    wire [7:0] row;
+    wire [7:0] r_col;
+	 wire [7:0] g_col;
+
+	 ParcelLocker testbench(
+	 .clk_in(clk_in),
+    .r_col(r_col),
+    .g_col(g_col)
+	 );
+	
+	parameter clk_period = 10;  
+  
+	initial begin  
+    clk_in = 0;  
+    forever  
+        #(clk_period/2) clk_in = ~clk_in;
+	end  
+endmodule

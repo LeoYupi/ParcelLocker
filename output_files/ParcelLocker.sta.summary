@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Setup 'clk_in'
+Slack : -14.402
+TNS   : -1638.546
+
+Type  : Setup 'ClockDivide:Hz1k|clk_div'
+Slack : -11.524
+TNS   : -678.771
+
+Type  : Setup 'ClockDivide:Hz2|clk_div'
+Slack : -7.726
+TNS   : -58.560
+
+Type  : Setup 'ClockDivide:Hz4|clk_div'
+Slack : -7.178
+TNS   : -35.139
+
+Type  : Hold 'clk_in'
+Slack : -2.037
+TNS   : -5.415
+
+Type  : Hold 'ClockDivide:Hz4|clk_div'
+Slack : 1.078
+TNS   : 0.000
+
+Type  : Hold 'ClockDivide:Hz1k|clk_div'
+Slack : 1.649
+TNS   : 0.000
+
+Type  : Hold 'ClockDivide:Hz2|clk_div'
+Slack : 2.230
+TNS   : 0.000
+
+Type  : Recovery 'ClockDivide:Hz2|clk_div'
+Slack : -6.731
+TNS   : -52.482
+
+Type  : Recovery 'ClockDivide:Hz1k|clk_div'
+Slack : -5.446
+TNS   : -101.138
+
+Type  : Recovery 'ClockDivide:Hz4|clk_div'
+Slack : -3.703
+TNS   : -20.495
+
+Type  : Removal 'ClockDivide:Hz4|clk_div'
+Slack : 3.590
+TNS   : 0.000
+
+Type  : Removal 'ClockDivide:Hz2|clk_div'
+Slack : 3.886
+TNS   : 0.000
+
+Type  : Removal 'ClockDivide:Hz1k|clk_div'
+Slack : 3.950
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'clk_in'
+Slack : -2.289
+TNS   : -2.289
+
+Type  : Minimum Pulse Width 'ClockDivide:Hz1k|clk_div'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'ClockDivide:Hz2|clk_div'
+Slack : 0.234
+TNS   : 0.000
+
+Type  : Minimum Pulse Width 'ClockDivide:Hz4|clk_div'
+Slack : 0.234
+TNS   : 0.000
+
+------------------------------------------------------------

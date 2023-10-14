@@ -1,0 +1,5 @@
+module ParcelLocker(clk, row, col_r, col_g)
+input clk;//时钟输入
+output row;
+output col_r, col_g;
+endmodule

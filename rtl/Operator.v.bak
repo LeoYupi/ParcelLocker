@@ -1,0 +1,65 @@
+module Memory(clk_1k,num_in,num2,num1,num0,kb_en,cfm,taking,full,snd_sel);
+		input [3:0] num_in;
+		input kb_en;
+		input clk_1k;
+		input [7:0] full;
+		
+		output reg [3:0] num2=4'hA;
+		output reg [3:0] num1=4'hA;
+		output reg [3:0] num0=4'hA;
+		output reg [3:0] taking=4'hA;
+		output reg cfm=0;
+		output reg [3:0] snd_sel=0;
+	
+		always@(posedge clk_1k)begin
+		if(kb_en)begin
+			case(num_in)
+				4'hA:begin num2<=num2;num1<=num1;num0<=num0;end				//空键
+				4'hC:begin																															//确认	
+								if({num2,num1,num0}<8) begin	
+									if(full[num0]) begin			//传入数据成功，数码管清空
+										num2<=4'hA;
+										num1<=4'hA;
+										num0<=4'hA;
+										cfm<=1;
+										taking<=num0;
+										snd_sel<=4'hC;
+									end
+									else begin							//箱子空，传入数据失败，显示E
+										num2<=4'hA;
+										num1<=4'hA;
+										num0<=4'hB;
+										snd_sel<=4'hE;
+									end
+								end
+								else begin								//输入有误，传入数据失败，显示E
+									num2<=4'hA;
+									num1<=4'hA;
+									num0<=4'hB;
+									snd_sel<=4'hE;
+								end
+							end
+				4'hD:begin num2<=4'hA;num1<=num2;num0<=num1;snd_sel<=4'hD;end			//删除
+				4'hE:begin num2<=4'hA;num1<=4'hA;num0<=4'hA;snd_sel<=4'hA;end					//清空
+				default:begin																												//输入（最多三位）
+									if(num0==4'hB)begin						//E字符，即错误字符不占位
+										num2<=4'hA;
+										num1<=4'hA;
+										num0<=num_in;
+										snd_sel<=num_in;
+									end
+									else if(num2==4'hA)begin		//最高位空时才可以输入
+										num2<=num1;
+										num1<=num0;
+										num0<=num_in;
+										snd_sel<=num_in;
+									end
+								end
+			endcase
+		end
+		else begin
+			cfm<=0;
+		end
+	end
+	
+endmodule

@@ -1,0 +1,21 @@
+`timescale 10us/1ns
+module ClockDivide_tb;
+    reg clk_in;
+    wire clk_div;
+
+	 ClockDivide(
+	 .clk_in(clk_in),
+    .frequency(1_000),
+	 .clk_div(clk_div)
+    .rst(0)
+	 );
+	
+  
+parameter clk_period = 10;  
+initial  begin
+    clk_in = 0;
+		#500000;
+		$stop;
+		end
+always #(clk_period/2) clk_in = ~clk_in;  
+endmodule

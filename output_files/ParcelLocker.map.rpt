@@ -1,0 +1,583 @@
+Analysis & Synthesis report for ParcelLocker
+Sun Dec 26 11:56:18 2021
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Parameter Settings for User Entity Instance: ClockDivide:Hz1k
+ 15. Parameter Settings for User Entity Instance: ClockDivide:Hz2
+ 16. Parameter Settings for User Entity Instance: ClockDivide:Hz4
+ 17. Parameter Settings for User Entity Instance: BP:bp
+ 18. Port Connectivity Checks: "ClockDivide:Hz4"
+ 19. Port Connectivity Checks: "ClockDivide:Hz2"
+ 20. Port Connectivity Checks: "ClockDivide:Hz1k"
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                              ;
++-----------------------------+---------------------------------------------+
+; Analysis & Synthesis Status ; Successful - Sun Dec 26 11:56:18 2021       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; ParcelLocker                                ;
+; Top-level Entity Name       ; ParcelLocker                                ;
+; Family                      ; MAX II                                      ;
+; Total logic elements        ; 899                                         ;
+; Total pins                  ; 59                                          ;
+; Total virtual pins          ; 0                                           ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                               ;
++-----------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EPM1270T144C5      ;                    ;
+; Top-level entity name                                            ; ParcelLocker       ; ParcelLocker       ;
+; Family name                                                      ; MAX II             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 12          ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                               ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                 ; Library ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+; rtl/Operator.v                   ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Operator.v     ;         ;
+; rtl/ParcelLocker.v               ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v ;         ;
+; rtl/Screen.v                     ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v       ;         ;
+; rtl/ClockDivide.v                ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v  ;         ;
+; rtl/DISP.v                       ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v         ;         ;
+; rtl/Keyboard.v                   ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v     ;         ;
+; rtl/debounce.v                   ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v     ;         ;
+; rtl/LD.v                         ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v           ;         ;
+; rtl/BP.v                         ; yes             ; User Verilog HDL File  ; D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v           ;         ;
++----------------------------------+-----------------+------------------------+--------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary         ;
++---------------------------------------------+-------+
+; Resource                                    ; Usage ;
++---------------------------------------------+-------+
+; Total logic elements                        ; 899   ;
+;     -- Combinational with no register       ; 566   ;
+;     -- Register only                        ; 48    ;
+;     -- Combinational with a register        ; 285   ;
+;                                             ;       ;
+; Logic element usage by number of LUT inputs ;       ;
+;     -- 4 input functions                    ; 405   ;
+;     -- 3 input functions                    ; 113   ;
+;     -- 2 input functions                    ; 308   ;
+;     -- 1 input functions                    ; 24    ;
+;     -- 0 input functions                    ; 1     ;
+;                                             ;       ;
+; Logic elements by mode                      ;       ;
+;     -- normal mode                          ; 668   ;
+;     -- arithmetic mode                      ; 231   ;
+;     -- qfbk mode                            ; 0     ;
+;     -- register cascade mode                ; 0     ;
+;     -- synchronous clear/load mode          ; 132   ;
+;     -- asynchronous clear/load mode         ; 272   ;
+;                                             ;       ;
+; Total registers                             ; 333   ;
+; Total logic cells in carry chains           ; 244   ;
+; I/O pins                                    ; 59    ;
+; Maximum fan-out node                        ; rst   ;
+; Maximum fan-out                             ; 275   ;
+; Total fan-out                               ; 3487  ;
+; Average fan-out                             ; 3.64  ;
++---------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name            ; Entity Name  ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------+--------------+--------------+
+; |ParcelLocker              ; 899 (0)     ; 333          ; 0          ; 59   ; 0            ; 566 (0)      ; 48 (0)            ; 285 (0)          ; 244 (0)         ; 0 (0)      ; |ParcelLocker                  ; ParcelLocker ; work         ;
+;    |BP:bp|                 ; 289 (289)   ; 74           ; 0          ; 0    ; 0            ; 215 (215)    ; 0 (0)             ; 74 (74)          ; 82 (82)         ; 0 (0)      ; |ParcelLocker|BP:bp            ; BP           ; work         ;
+;    |ClockDivide:Hz1k|      ; 59 (59)     ; 26           ; 0          ; 0    ; 0            ; 33 (33)      ; 19 (19)           ; 7 (7)            ; 25 (25)         ; 0 (0)      ; |ParcelLocker|ClockDivide:Hz1k ; ClockDivide  ; work         ;
+;    |ClockDivide:Hz2|       ; 55 (55)     ; 23           ; 0          ; 0    ; 0            ; 32 (32)      ; 10 (10)           ; 13 (13)          ; 24 (24)         ; 0 (0)      ; |ParcelLocker|ClockDivide:Hz2  ; ClockDivide  ; work         ;
+;    |ClockDivide:Hz4|       ; 53 (53)     ; 22           ; 0          ; 0    ; 0            ; 31 (31)      ; 9 (9)             ; 13 (13)          ; 24 (24)         ; 0 (0)      ; |ParcelLocker|ClockDivide:Hz4  ; ClockDivide  ; work         ;
+;    |DISP:DS|               ; 46 (46)     ; 17           ; 0          ; 0    ; 0            ; 29 (29)      ; 0 (0)             ; 17 (17)          ; 0 (0)           ; 0 (0)      ; |ParcelLocker|DISP:DS          ; DISP         ; work         ;
+;    |Keyboard:kb|           ; 31 (31)     ; 17           ; 0          ; 0    ; 0            ; 14 (14)      ; 1 (1)             ; 16 (16)          ; 0 (0)           ; 0 (0)      ; |ParcelLocker|Keyboard:kb      ; Keyboard     ; work         ;
+;    |LD:ledld|              ; 54 (54)     ; 8            ; 0          ; 0    ; 0            ; 46 (46)      ; 0 (0)             ; 8 (8)            ; 0 (0)           ; 0 (0)      ; |ParcelLocker|LD:ledld         ; LD           ; work         ;
+;    |Operator:op|           ; 63 (63)     ; 22           ; 0          ; 0    ; 0            ; 41 (41)      ; 5 (5)             ; 17 (17)          ; 0 (0)           ; 0 (0)      ; |ParcelLocker|Operator:op      ; Operator     ; work         ;
+;    |Screen:scr|            ; 129 (129)   ; 32           ; 0          ; 0    ; 0            ; 97 (97)      ; 4 (4)             ; 28 (28)          ; 5 (5)           ; 0 (0)      ; |ParcelLocker|Screen:scr       ; Screen       ; work         ;
+;    |debounce:kbdb0|        ; 30 (30)     ; 23           ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 23 (23)          ; 21 (21)         ; 0 (0)      ; |ParcelLocker|debounce:kbdb0   ; debounce     ; work         ;
+;    |debounce:kbdb1|        ; 30 (30)     ; 23           ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 23 (23)          ; 21 (21)         ; 0 (0)      ; |ParcelLocker|debounce:kbdb1   ; debounce     ; work         ;
+;    |debounce:kbdb2|        ; 30 (30)     ; 23           ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 23 (23)          ; 21 (21)         ; 0 (0)      ; |ParcelLocker|debounce:kbdb2   ; debounce     ; work         ;
+;    |debounce:kbdb3|        ; 30 (30)     ; 23           ; 0          ; 0    ; 0            ; 7 (7)        ; 0 (0)             ; 23 (23)          ; 21 (21)         ; 0 (0)      ; |ParcelLocker|debounce:kbdb3   ; debounce     ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+--------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                               ;
++----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------+---------------------+------------------------+
+; LD:ledld|full[2]                                   ; LD:ledld|full[2]    ; yes                    ;
+; LD:ledld|full[1]                                   ; LD:ledld|full[1]    ; yes                    ;
+; LD:ledld|full[0]                                   ; LD:ledld|full[0]    ; yes                    ;
+; LD:ledld|full[3]                                   ; LD:ledld|full[3]    ; yes                    ;
+; LD:ledld|full[6]                                   ; LD:ledld|full[6]    ; yes                    ;
+; LD:ledld|full[5]                                   ; LD:ledld|full[5]    ; yes                    ;
+; LD:ledld|full[4]                                   ; LD:ledld|full[4]    ; yes                    ;
+; LD:ledld|full[7]                                   ; LD:ledld|full[7]    ; yes                    ;
+; Number of user-specified and inferred latches = 8  ;                     ;                        ;
++----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                               ;
++-----------------------------------------+----------------------------------------+
+; Register name                           ; Reason for Removal                     ;
++-----------------------------------------+----------------------------------------+
+; DISP:DS|seg[0][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[0][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[0][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[0][3]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[0][4]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[0][5]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[0][6]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[0][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[1][0]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[1][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[1][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[1][3]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[1][4]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[1][5]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[1][6]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[1][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[2][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[2][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[2][2]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[2][3]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[2][4]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[2][5]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[2][6]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[2][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[3][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[3][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[3][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[3][3]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[3][4]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[3][5]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[3][6]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[3][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[4][0]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[4][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[4][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[4][3]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[4][4]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[4][5]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[4][6]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[4][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[5][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[5][1]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[5][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[5][3]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[5][4]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[5][5]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[5][6]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[5][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[6][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[6][1]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[6][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[6][3]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[6][4]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[6][5]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[6][6]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[6][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[7][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[7][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[7][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[7][3]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[7][4]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[7][5]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[7][6]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[7][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[8][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[8][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[8][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[8][3]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[8][4]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[8][5]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[8][6]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[8][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[9][0]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[9][1]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[9][2]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[9][3]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[9][4]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[9][5]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[9][6]                       ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[9][7]                       ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][0]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][1]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][2]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][3]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][4]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][5]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][6]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[10][7]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[11][0]                      ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[11][1]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[11][2]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg[11][3]                      ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[11][4]                      ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[11][5]                      ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[11][6]                      ; Stuck at VCC due to stuck port data_in ;
+; DISP:DS|seg[11][7]                      ; Stuck at GND due to stuck port data_in ;
+; DISP:DS|seg_write                       ; Lost fanout                            ;
+; Screen:scr|g_col[6,7]                   ; Stuck at GND due to stuck port data_in ;
+; BP:bp|note_duration[4]                  ; Merged with BP:bp|note_duration[5]     ;
+; BP:bp|note_duration[5]                  ; Merged with BP:bp|note_duration[6]     ;
+; BP:bp|note_duration[0]                  ; Merged with BP:bp|note_duration[2]     ;
+; DISP:DS|a[7]                            ; Stuck at GND due to stuck port data_in ;
+; ClockDivide:Hz2|cnt[0]                  ; Merged with ClockDivide:Hz1k|cnt[0]    ;
+; ClockDivide:Hz4|cnt[0]                  ; Merged with ClockDivide:Hz1k|cnt[0]    ;
+; ClockDivide:Hz4|cnt[1]                  ; Merged with ClockDivide:Hz1k|cnt[1]    ;
+; ClockDivide:Hz2|cnt[1]                  ; Merged with ClockDivide:Hz1k|cnt[1]    ;
+; ClockDivide:Hz4|cnt[2]                  ; Merged with ClockDivide:Hz2|cnt[2]     ;
+; ClockDivide:Hz2|cnt[2]                  ; Merged with ClockDivide:Hz1k|cnt[2]    ;
+; ClockDivide:Hz4|cnt[3]                  ; Merged with ClockDivide:Hz2|cnt[3]     ;
+; Total Number of Removed Registers = 110 ;                                        ;
++-----------------------------------------+----------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                            ;
++-------------------+---------------------------+----------------------------------------+
+; Register name     ; Reason for Removal        ; Registers Removed due to This Register ;
++-------------------+---------------------------+----------------------------------------+
+; DISP:DS|seg[0][0] ; Stuck at VCC              ; DISP:DS|seg_write                      ;
+;                   ; due to stuck port data_in ;                                        ;
+; DISP:DS|seg[0][7] ; Stuck at GND              ; DISP:DS|a[7]                           ;
+;                   ; due to stuck port data_in ;                                        ;
++-------------------+---------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 333   ;
+; Number of registers using Synchronous Clear  ; 129   ;
+; Number of registers using Synchronous Load   ; 3     ;
+; Number of registers using Asynchronous Clear ; 270   ;
+; Number of registers using Asynchronous Load  ; 15    ;
+; Number of registers using Clock Enable       ; 37    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; Operator:op|ds0[1]                      ; 14      ;
+; Operator:op|ds0[3]                      ; 11      ;
+; Operator:op|ds1[1]                      ; 10      ;
+; Operator:op|ds1[3]                      ; 10      ;
+; Operator:op|ds2[1]                      ; 10      ;
+; Operator:op|ds2[3]                      ; 10      ;
+; Operator:op|taking[1]                   ; 11      ;
+; Operator:op|taking[3]                   ; 8       ;
+; Operator:op|snd_sel[1]                  ; 51      ;
+; Operator:op|snd_sel[0]                  ; 49      ;
+; Operator:op|snd_sel[3]                  ; 28      ;
+; Total number of inverted registers = 11 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ParcelLocker|Screen:scr|cnt_playing[1] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |ParcelLocker|BP:bp|cnt_note[3]         ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |ParcelLocker|BP:bp|cnt_duration[0]     ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |ParcelLocker|Keyboard:kb|row_index[0]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |ParcelLocker|BP:bp|note_pitch[15]      ;
+; 32:1               ; 3 bits    ; 63 LEs        ; 27 LEs               ; 36 LEs                 ; Yes        ; |ParcelLocker|Screen:scr|g_col[0]       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |ParcelLocker|BP:bp|note_pitch[8]       ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |ParcelLocker|Operator:op|ds2[2]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ParcelLocker|Operator:op|ds1[0]        ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 8 LEs                ; 2 LEs                  ; Yes        ; |ParcelLocker|BP:bp|note_pitch[7]       ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |ParcelLocker|BP:bp|note_pitch[4]       ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |ParcelLocker|Operator:op|snd_sel[3]    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |ParcelLocker|Operator:op|ds0[3]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |ParcelLocker|Operator:op|ds2[1]        ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |ParcelLocker|Operator:op|ds1[3]        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |ParcelLocker|Screen:scr|Mux5           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------+
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockDivide:Hz1k ;
++----------------+----------------------------+-----------------+
+; Parameter Name ; Value                      ; Type            ;
++----------------+----------------------------+-----------------+
+; SYS_FREQUENCY  ; 10111110101111000010000000 ; Unsigned Binary ;
++----------------+----------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockDivide:Hz2  ;
++----------------+----------------------------+-----------------+
+; Parameter Name ; Value                      ; Type            ;
++----------------+----------------------------+-----------------+
+; SYS_FREQUENCY  ; 10111110101111000010000000 ; Unsigned Binary ;
++----------------+----------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ClockDivide:Hz4  ;
++----------------+----------------------------+-----------------+
+; Parameter Name ; Value                      ; Type            ;
++----------------+----------------------------+-----------------+
+; SYS_FREQUENCY  ; 10111110101111000010000000 ; Unsigned Binary ;
++----------------+----------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------+
+; Parameter Settings for User Entity Instance: BP:bp ;
++----------------+-------+---------------------------+
+; Parameter Name ; Value ; Type                      ;
++----------------+-------+---------------------------+
+; DIVIDE         ; 2     ; Signed Integer            ;
++----------------+-------+---------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ClockDivide:Hz4"                                                                                                                                                                              ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; frequency        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (26 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; frequency[25..3] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; frequency[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; frequency[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ClockDivide:Hz2"                                                                                                                                                                              ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port             ; Type  ; Severity ; Details                                                                                                                                                                            ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; frequency        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (26 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; frequency[25..2] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; frequency[1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; frequency[0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ClockDivide:Hz1k"                                                                                                                                                                              ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port              ; Type  ; Severity ; Details                                                                                                                                                                            ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; frequency         ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (26 bits) it drives.  The 6 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; frequency[9..5]   ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
+; frequency[25..10] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; frequency[2..0]   ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; frequency[4]      ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; frequency[3]      ; Input ; Info     ; Stuck at VCC                                                                                                                                                                       ;
++-------------------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sun Dec 26 11:56:06 2021
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ParcelLocker -c ParcelLocker
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/operator.v
+    Info (12023): Found entity 1: Operator File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Operator.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/parcellocker.v
+    Info (12023): Found entity 1: ParcelLocker File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/screen.v
+    Info (12023): Found entity 1: Screen File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/clockdivide.v
+    Info (12023): Found entity 1: ClockDivide File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file tb/parcellocker_tb.v
+    Info (12023): Found entity 1: ParcelLocker_tb File: D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ParcelLocker_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file tb/clockdivide_tb.v
+    Info (12023): Found entity 1: ClockDivide_tb File: D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/disp.v
+    Info (12023): Found entity 1: DISP File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/keyboard.v
+    Info (12023): Found entity 1: Keyboard File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/debounce.v
+    Info (12023): Found entity 1: debounce File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/ld.v
+    Info (12023): Found entity 1: LD File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file rtl/bp.v
+    Info (12023): Found entity 1: BP File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v Line: 2
+Info (12127): Elaborating entity "ParcelLocker" for the top level hierarchy
+Info (12128): Elaborating entity "ClockDivide" for hierarchy "ClockDivide:Hz1k" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 39
+Info (12128): Elaborating entity "Screen" for hierarchy "Screen:scr" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 68
+Info (12128): Elaborating entity "DISP" for hierarchy "DISP:DS" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 82
+Info (12128): Elaborating entity "Keyboard" for hierarchy "Keyboard:kb" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 96
+Info (12128): Elaborating entity "Operator" for hierarchy "Operator:op" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 116
+Info (12128): Elaborating entity "LD" for hierarchy "LD:ledld" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 129
+Warning (10240): Verilog HDL Always Construct warning at LD.v(13): inferring latch(es) for variable "full", which holds its previous value in one or more paths through the always construct File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[0]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[1]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[2]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[3]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[4]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[5]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[6]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (10041): Inferred latch for "full[7]" at LD.v(13) File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v Line: 13
+Info (12128): Elaborating entity "BP" for hierarchy "BP:bp" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 154
+Info (10264): Verilog HDL Case Statement information at BP.v(159): all case item expressions in this case statement are onehot File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v Line: 159
+Info (10264): Verilog HDL Case Statement information at BP.v(164): all case item expressions in this case statement are onehot File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v Line: 164
+Info (12128): Elaborating entity "debounce" for hierarchy "debounce:kbdb0" File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 165
+Warning (12241): 3 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "g_col[6]" is stuck at GND File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 8
+    Warning (13410): Pin "g_col[7]" is stuck at GND File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 8
+    Warning (13410): Pin "ds_a[7]" is stuck at GND File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v Line: 9
+Info (18000): Registers with preset signals will power-up high File: D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Operator.v Line: 46
+Info (17049): 1 registers lost all their fanouts during netlist optimizations.
+Info (21057): Implemented 958 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 53 output pins
+    Info (21061): Implemented 899 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4707 megabytes
+    Info: Processing ended: Sun Dec 26 11:56:18 2021
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:22
+
+

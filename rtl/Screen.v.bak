@@ -1,0 +1,52 @@
+module Screen(clk_1k,clk_4,row,r_col,g_col);
+    
+	 input clk_1k,clk_4;
+    output reg[7:0] row,r_col,g_col;
+	
+	 reg cnt_pattern= 0;//图案切换
+	 reg [3:0] cnt_scan= 0;//点阵扫描
+	 
+	 always @(posedge clk_4)//图案切换计数器
+		  begin  
+				cnt_pattern=~cnt_pattern;
+		  end	
+			
+    always @(posedge clk_1k)//点阵扫描计数器
+	     begin
+			   if(cnt_scan ==3'b111)
+					 cnt_scan <= 3'b000;
+				else
+					 cnt_scan <= cnt_scan + 1'b1;
+		  end
+   
+	  always @(cnt_scan or cnt_pattern)
+			begin
+			  case(cnt_pattern)				 
+				 0:begin
+							 case(cnt_scan)//图案一
+							 3'b111:begin row=8'b0111_1111; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b110:begin row=8'b1011_1111; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b101:begin row=8'b1101_1111; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b100:begin row=8'b1110_1111; r_col=8'b1100_0011; g_col= 8'b1101_1000; end
+							 3'b011:begin row=8'b1111_0111; r_col=8'b1100_0011; g_col= 8'b1101_1000; end
+							 3'b010:begin row=8'b1111_1011; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b001:begin row=8'b1111_1101; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b000:begin row=8'b1111_1110; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 endcase
+						 end
+				 1:begin
+							 case(cnt_scan)//图案二
+							 3'b111:begin row=8'b0111_1111; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b110:begin row=8'b1011_1111; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b101:begin row=8'b1101_1111; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b100:begin row=8'b1110_1111; r_col=8'b1100_0011; g_col= 8'b1100_0000; end
+							 3'b011:begin row=8'b1111_0111; r_col=8'b1100_0011; g_col= 8'b1100_0000; end
+							 3'b010:begin row=8'b1111_1011; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b001:begin row=8'b1111_1101; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 3'b000:begin row=8'b1111_1110; r_col=8'b0000_0000; g_col= 8'b0000_0000; end
+							 endcase
+						 end
+				endcase
+			end              
+	 
+	endmodule

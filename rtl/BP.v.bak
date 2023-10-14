@@ -1,0 +1,12 @@
+module BP(clk_in,clk_2,beep,snd_sel)
+	input clk_in,clk_2;
+	input snd_sel;//选择某一种响声
+	
+	output beep;
+	
+	reg cnt_pitch;//音高，通过控制周期来控制频率
+	reg cnt_duration;//时值，控制某个音响多久
+	reg cnt_tone;//音色，调节占空比，即周期多少比例的时候切换高低电平
+	
+	
+	

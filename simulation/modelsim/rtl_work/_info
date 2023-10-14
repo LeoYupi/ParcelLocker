@@ -1,0 +1,239 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/intelFPGA_lite/18.1/class/ParcelLocker/simulation/modelsim
+vBP
+Z1 !s110 1638956602
+!i10b 1
+!s100 L[h>3_D18XF2kR9GBJo4P2
+IN_2YVn>@Z3Ach8;Y_d?Qb0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1638956412
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1638956602.000000
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/BP.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl
+Z7 tCvgOpt 0
+n@b@p
+vClockDivide
+Z8 !s110 1638956601
+!i10b 1
+!s100 ;lYhF[Z7_d`4eQ;1oTC`31
+IW6C4EGFR`6?QnhChUDL3>3
+R2
+R0
+w1638929399
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1638956601.000000
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ClockDivide.v|
+!i113 1
+R5
+R6
+R7
+n@clock@divide
+vClockDivide_tb
+R1
+!i10b 1
+!s100 ^<;TY[M@8Vg7QYgJoL=_N3
+IdTHe[=@SmOQ_Q?@;^:N6D3
+R2
+R0
+w1638956531
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/tb|D:/intelFPGA_lite/18.1/class/ParcelLocker/tb/ClockDivide_tb.v|
+!i113 1
+R5
+!s92 -vlog01compat -work work +incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/tb
+R7
+n@clock@divide_tb
+vdebounce
+R8
+!i10b 1
+!s100 i5H<J1BcFVZ[OZ9AjWLR21
+IP`L^SlYFYKAcZ`4RoblZa3
+R2
+R0
+w1638889766
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/debounce.v|
+!i113 1
+R5
+R6
+R7
+vDISP
+R8
+!i10b 1
+!s100 HbSjLM8iMVz_0@lb:gHDa3
+I^Li9V7]mDOS388ZBnGbCl2
+R2
+R0
+w1638929598
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/DISP.v|
+!i113 1
+R5
+R6
+R7
+n@d@i@s@p
+vKeyboard
+R8
+!i10b 1
+!s100 M@NGFCL^6Ua5=AW3WNI0<3
+IIN23kj7RWE_V;D3Lf2iLQ3
+R2
+R0
+w1638931298
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Keyboard.v|
+!i113 1
+R5
+R6
+R7
+n@keyboard
+vLD
+R1
+!i10b 1
+!s100 VUMbjcT25z<XJa27C7_RG1
+IkzM@4gZzQ6lI2:jCQF4ob0
+R2
+R0
+w1638933991
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/LD.v|
+!i113 1
+R5
+R6
+R7
+n@l@d
+vMemory
+Z10 !s110 1638956600
+!i10b 1
+!s100 7Z68BbAZ:1n:?FZXaE`2c3
+IfNJO7:LmQ5gb?<9]M6W;P0
+R2
+R0
+w1638892098
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Memory.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Memory.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z11 !s108 1638956600.000000
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Memory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Memory.v|
+!i113 1
+R5
+R6
+R7
+n@memory
+vParcelLocker
+R10
+!i10b 1
+!s100 93e2WW?_RTPFdo<flaNfb2
+IKP4eeU>bgG;[H?ASE[S6K0
+R2
+R0
+w1638954361
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v
+L0 1
+R3
+r1
+!s85 0
+31
+R11
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/ParcelLocker.v|
+!i113 1
+R5
+R6
+R7
+n@parcel@locker
+vScreen
+R8
+!i10b 1
+!s100 o3?l0WhNhUzJVESLTNC]J2
+InOoGf>^mEVi28c5VafgQN0
+R2
+R0
+w1638935101
+8D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v
+FD:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl|D:/intelFPGA_lite/18.1/class/ParcelLocker/rtl/Screen.v|
+!i113 1
+R5
+R6
+R7
+n@screen

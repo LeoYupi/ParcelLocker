@@ -1,0 +1,20 @@
+module ClockDivide(clk,frequency,clk_div);//时钟分频
+    
+    input clk;
+	 input [25:0] frequency;
+	 output clk_div;
+	 
+	 reg clk_div=0;
+	 reg [24:0] cnt=0;//最小能将50M Hz分成1Hz
+	 
+	 always @(posedge clk)
+			begin
+				 cnt <= cnt+1'b1;
+				 if(cnt == (25_000_000/frequency-1))
+					  begin
+						  cnt <= 0;
+						  clk_div <= ~clk_div;
+					  end
+			end
+	 
+endmodule

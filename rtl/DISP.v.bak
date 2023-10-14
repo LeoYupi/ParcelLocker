@@ -1,0 +1,43 @@
+module DISP(a,cat,clk_1k,rst);
+	input clk_1k;
+	reg [2:0]num0=0;
+	reg [2:0]num1=0;
+	reg [2:0]num2=7;
+	
+	initial begin
+		seg[0] = 8'b00111111;//0
+		seg[1] = 8'b00000110;//1
+		seg[2] = 8'b01011011;//2
+		seg[3] = 8'b01001111;//3			 
+		seg[4] = 8'b01100110;//4
+		seg[5] = 8'b01101101;//5
+		seg[6] = 8'b01111101;//6
+		seg[7] = 8'b00000111;//7
+		//seg[8] = 8'b01111111;//8
+		//seg[9] = 8'b01101111;//9
+	end
+	
+	output [7:0] a;//数码管段码A~G，最后一位小数点
+	output [2:0] cat;//数码管段选
+	
+	reg [1:0] cnt_cat = 0; //计数器
+	
+   always @(posedge clk_1k or posedge rst)//数码管扫描计数器
+		 begin
+			if(rst)
+				 cnt_cat <= 2'b00;
+			else if(cnt_cat ==2'b10)
+				 cnt_cat <= 2'b00;
+			else
+				 cnt_cat <= cnt_cat + 1'b1;
+		 end  
+		 
+	   always @(posedge clk_1k) // 数码管扫描
+		begin
+			case(cnt_cat)
+				 2'b00:begin cat = 3'b110; a = seg[num0]; end//DS0
+				 2'b01:begin cat = 3'b101; a = seg[num1]; end//DS1
+				 2'b10:begin cat = 3'b011; a = seg[num2]; end//DS2
+			endcase
+	
+endmodule
